@@ -1,0 +1,75 @@
+@font-face {
+    font-family: pokemon;
+    src: url("./pokemon.ttf");
+}
+
+* {
+    margin :0;
+    padding: 0;
+    box-sizing: border-box;
+    --color-Main :red;
+    --color-secondary : yellow;
+    --color-ter : black;
+    --color-body : rgb(241, 176, 176);
+}
+
+body {
+    background-color: var(--color-body);
+}
+
+header {
+    background-color: var(--color-Main);
+    color: var(--color-secondary);
+    width : 100vw;
+    height: 24vh;
+    position: fixed;
+    display : flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 3vh;
+}
+
+header>img {
+    display : block;
+    height : 16vh;
+    margin: 0 2vw;
+}
+
+header>h1 {
+    font-family: pokemon;
+    font-size: 12vh;
+}
+
+/*Pop UP de démarrage*/
+
+#welcomePopUp {
+    position:absolute;
+    height: 30vh;
+    top : 35vh;
+    width : 80vw;
+    Left : 10vw;
+    background-color: var(--color-Main);
+    color : var(--color-secondary);
+    border : var(--color-secondary) solid 3px;
+    border-radius: 5vh;
+    box-shadow: var(--color-Main) 5px 5px 10px 0;
+    font-family: pokemon;
+    font-size: 5vh;
+    opacity: 0;
+    transition : opacity 1s;
+    text-align: center;
+    z-index: 10;
+
+}
+
+main {
+    position: relative;
+    top : 24vh;
+    width : 100vw;
+    z-index: -10;
+}
+
+.reverse {
+    transform : scaleX(-1)
+}
